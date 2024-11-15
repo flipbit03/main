@@ -37,7 +37,8 @@ def test_assert_function_actually_gets_called(mock_exit):
 
     # We patch __name__ here because doing so via a proper pytest fixture would be _A Lot Of Work (TM)_, because
     # of the insane amount of stack manipulation that would be required to get the desired effect.
-    __name__ = "__main__"
+    # The "noqa" flag here is important, or else our pre-commit hooks (flake) will remove this assignment.
+    __name__ = "__main__"  # noqa
 
     @main
     def my_main_func():
