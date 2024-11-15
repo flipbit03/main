@@ -2,7 +2,7 @@
 name = "python-main"
 version = "1.0.0"
 homepage = "https://github.com/flipbit03/main"
-description = "@main decorator which runs the tagged function if the current module is being run. No more if __name__ == \"__main__\":. That's it!"
+description = "Decorator which runs the tagged function if the current module is being run as a script. No more `if __name__ == \"__main__\"` madness."
 authors = ["Cadu <cadu.coelho@gmail.com>"]
 license = "BSD"
 readme = "README.md"
