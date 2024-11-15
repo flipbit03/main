@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "python-main"
-version = "0.0.1"
+version = "0.0.2"
 description = "@main decorator which runs the tagged function if the current module is being run. No more if __name__ == \"__main__\":. That's it!"
 authors = ["Cadu <cadu.coelho@gmail.com>"]
 license = "BSD"
