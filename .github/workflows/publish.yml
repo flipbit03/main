@@ -4,11 +4,8 @@ permissions:
   id-token: write
 
 on:
-  push:
-    branches:
-      - tests_and_publishing
-    tags:
-      - 'v*'
+  release:
+    types: [published]
   workflow_dispatch:
 
 jobs:
@@ -42,7 +39,3 @@ jobs:
 
       - name: publish to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
-        #with:
-        #  user: __token__
-        #  password: ${{ secrets.PYPI_API_TOKEN }}
-        #skip-existing: true
