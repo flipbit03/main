@@ -1,10 +1,18 @@
 [tool.poetry]
 name = "python-main"
 version = "1.0.0"
-description = "@main decorator which runs the tagged function if the current module is being run. No more if __name__ == \"__main__\":. That's it!"
+homepage = "https://github.com/flipbit03/main"
+description = "Decorator which runs the tagged function if the current module is being run as a script. No more `if __name__ == \"__main__\"` madness."
 authors = ["Cadu <cadu.coelho@gmail.com>"]
 license = "BSD"
 readme = "README.md"
+
+classifiers=[
+    'Development Status :: 5 - Production/Stable',
+    'Intended Audience :: Developers',
+    'License :: OSI Approved :: BSD License',
+    'Natural Language :: English',
+]
 
 [tool.poetry.dependencies]
 python = "^3.9"

@@ -1,10 +1,21 @@
 # @main
 
-`@main` decorator which runs the tagged function if the current module is being run.
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/python-main)
+![PyPI - Version](https://img.shields.io/pypi/v/python-main)
+
+
+`@main` decorator which runs the tagged function if the current module is being executed as a script.
 
 No more `if __name__ == "__main__":` all over the place.
 
 That's it!
+
+### Installation
+
+```bash
+pip install python-main # or
+poetry add python-main # ...
+```
 
 ### Usage
 
@@ -17,6 +28,6 @@ B = 20
 
 @main
 def do_print():
-    """This will run if this module is called directly."""
+    """This will run if this module is executed."""
     print(A + B)
 ```
