@@ -1,4 +1,4 @@
-name: Publish to PyPI test
+name: Publish to PyPI
 
 permissions:
   id-token: write
