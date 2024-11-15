@@ -37,6 +37,7 @@ def test_assert_function_actually_gets_called(mock_exit):
 
     # We patch __name__ here because doing so via a proper pytest fixture would be _A Lot Of Work (TM)_, because
     # of the insane amount of stack manipulation that would be required to get the desired effect.
+    __name__ = "__main__"
 
     @main
     def my_main_func():
