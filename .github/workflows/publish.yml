@@ -1,5 +1,8 @@
 name: Publish to PyPI test
 
+permissions:
+  id-token: write
+
 on:
   push:
     branches:
