@@ -1,6 +1,6 @@
 import pytest
 
-from main import main
+from python_main import main
 
 
 class NotSet:

@@ -7,8 +7,9 @@ No more `if __name__ == "__main__":` all over the place.
 That's it!
 
 ### Usage
+
 ```python
-from main import main
+from python_main import main
 
 A = 10
 B = 20
