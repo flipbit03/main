@@ -2,7 +2,7 @@
 
 `@main` decorator which runs the tagged function if the current module is being run.
 
-No more `if __name__ == \"__main__\":` all over the place.
+No more `if __name__ == "__main__":` all over the place.
 
 That's it!
 
