@@ -1,9 +1,11 @@
+import builtins
+
 import pytest
 
 from python_main import main
-import builtins
 
 EXIT_CODE_RECEIVED = -1
+
 
 @pytest.fixture
 def mock_exit():
@@ -29,6 +31,7 @@ def __my_main_func():
     The answer to life, the universe, and everything.
     """
     builtins.exit(42)
+
 
 def test_assert_function_actually_gets_called(mock_exit):
     """
