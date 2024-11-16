@@ -45,7 +45,7 @@ def test_assert_function_actually_gets_called(mock_exit):
         """
         The answer to life, the universe, and everything.
         """
-        return 42
+        builtins.exit(42)
 
     # Ensure that our main function was able to call mock_exit with the expected value.
     assert EXIT_CODE_RECEIVED == 42
