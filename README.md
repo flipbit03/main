@@ -1,7 +1,7 @@
 # @main
 
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/python-main)
-![PyPI - Version](https://img.shields.io/pypi/v/python-main)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/python-main)](https://pypi.org/project/python-main/)
+[![PyPI - Version](https://img.shields.io/pypi/v/python-main)](https://pypi.org/project/python-main/)
 
 
 `@main` decorator which runs the tagged function if the current module is being executed as a script.
