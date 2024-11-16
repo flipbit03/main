@@ -60,8 +60,9 @@ def test_assert_function_does_not_get_called(mock_exit):
     """
 
     # Call the function, which is coming from a pytest execution and being imported as a module
-    main(__my_main_func)
+    function_returned = main(__my_main_func)
 
     # Exit code will not have been set.
     global EXIT_CODE_RECEIVED
     assert EXIT_CODE_RECEIVED == -1
+    assert function_returned == __my_main_func
