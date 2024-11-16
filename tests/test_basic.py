@@ -1,7 +1,7 @@
 import pytest
 
 from python_main import main
-
+import builtins
 
 class NotSet:
     pass
@@ -12,8 +12,6 @@ EXIT_CODE_RECEIVED = NotSet
 
 @pytest.fixture
 def mock_exit():
-    import builtins
-
     original_exit = builtins.exit
 
     def mock_exit(code):
