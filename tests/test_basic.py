@@ -40,12 +40,16 @@ def test_assert_function_actually_gets_called(mock_exit):
     # The "noqa" flag here is important, or else our pre-commit hooks (flake) will remove this assignment.
     __name__ = "__main__"  # noqa
 
-    @main
     def my_main_func():
         """
         The answer to life, the universe, and everything.
         """
         builtins.exit(42)
+
+    my_main_func.__module__ = "__main__"
+
+    # Decorate it
+    main(my_main_func)
 
     # Ensure that our main function was able to call mock_exit with the expected value.
     assert EXIT_CODE_RECEIVED == 42
