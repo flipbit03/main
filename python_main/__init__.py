@@ -1,13 +1,10 @@
-import builtins
-import inspect
 from typing import Callable, Optional
 
+__RAN_AS_SCRIPT_MODULE = "__main__"
+__CALLABLE_MODULE_PROP = "__module__"
 
-def main(f: Callable[[], Optional[int]]) -> None:
-    curr_frame = inspect.currentframe()
-    assert curr_frame is not None
-    assert curr_frame.f_back is not None
 
-    upper_frame = curr_frame.f_back
-    if upper_frame.f_locals["__name__"] == "__main__":
-        builtins.exit(f() or 0)
+def main(f: Callable[[], Optional[int]]) -> Callable:
+    if getattr(f, __CALLABLE_MODULE_PROP) == __RAN_AS_SCRIPT_MODULE:
+        f()
+    return f
