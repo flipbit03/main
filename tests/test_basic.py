@@ -51,7 +51,6 @@ def test_assert_function_actually_gets_called(mock_exit):
     __my_main_func.__module__ = __my_main_func_original_module
 
 
-
 def test_assert_function_does_not_get_called(mock_exit):
     """
     Assert that our decorated function does not get called in normal circumstances
