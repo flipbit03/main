@@ -29,6 +29,15 @@ jobs:
           python -m pip install --upgrade pip
           pip install poetry
 
+      - name: Set version from GITHUB_REF
+        run: >-
+          # GITHUB_REF will be `refs/tags/v1.2.3` for a tag named "v1.2.3"
+          # we strip the `refs/tags/` part to get the version number
+          # we also strip "v" from the version number, if it exists, getting "1.2.3"
+          export VERSION=$(echo ${{ github.ref }} | sed -e 's,.*/\(.*\),\1,' -e 's/^v//')
+          echo Setting version to $VERSION
+          poetry version $VERSION
+
       - name: Build wheels and source tarball
         run: >-
           poetry build

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "python-main"
-version = "1.0.2"
+version = "0.0.0"
 homepage = "https://github.com/flipbit03/main"
 description = "Decorator which runs the tagged function if the current module is being run as a script. No more `if __name__ == \"__main__\"` madness."
 authors = ["Cadu <cadu.coelho@gmail.com>"]
@@ -12,6 +12,10 @@ classifiers=[
     'Intended Audience :: Developers',
     'License :: OSI Approved :: BSD License',
     'Natural Language :: English',
+]
+
+packages = [
+    { include = "python_main"},
 ]
 
 [tool.poetry.dependencies]
