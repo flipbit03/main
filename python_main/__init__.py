@@ -1,9 +1,9 @@
-from typing import Any, Callable, TypeVar
+from typing import Callable, TypeVar
 
 __RAN_AS_SCRIPT_MODULE = "__main__"
 __CALLABLE_MODULE_PROP = "__module__"
 
-__MAIN_RETURN_TYPE = TypeVar("__MAIN_RETURN_TYPE", bound=Any)
+__MAIN_RETURN_TYPE = TypeVar("__MAIN_RETURN_TYPE")
 
 
 def main(f: Callable[[], __MAIN_RETURN_TYPE]) -> Callable[[], __MAIN_RETURN_TYPE]:
