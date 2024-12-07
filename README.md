@@ -27,7 +27,6 @@ from python_main import python_main
 A = 10
 B = 20
 
-
 @python_main
 def do_print():
     """This will run if this module is executed."""
