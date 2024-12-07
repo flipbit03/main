@@ -8,7 +8,7 @@
 - Automatically calls the function(s) tagged with it, if the current module is being **executed as a script**.
 - Does nothing if the current module is being **imported**.
 
-It is, essentially, similar to the `if __name__ == "__main__":` block, but as a decorator.
+It is, essentially, equivalent to the `if __name__ == "__main__":` construct, but as a decorator.
 
 That's all it does.
 
