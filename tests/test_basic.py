@@ -2,7 +2,7 @@ import builtins
 
 import pytest
 
-from python_main import main
+from python_main import python_main
 
 EXIT_CODE_RECEIVED = -1
 
@@ -44,7 +44,7 @@ def test_assert_function_actually_gets_called(mock_exit):
     __my_main_func.__module__ = "__main__"
 
     # Decorate it
-    main(__my_main_func)
+    python_main(__my_main_func)
 
     # Ensure that our main function was able to call mock_exit with the expected value.
     global EXIT_CODE_RECEIVED
@@ -60,7 +60,7 @@ def test_assert_function_does_not_get_called(mock_exit):
     """
 
     # Call the function, which is coming from a pytest execution and being imported as a module
-    function_returned = main(__my_main_func)
+    function_returned = python_main(__my_main_func)
 
     # Exit code will not have been set.
     global EXIT_CODE_RECEIVED
